@@ -1,6 +1,6 @@
 const value = document.querySelector('#value');
-const plus = document.querySelector('button[data-action="increment"]');
-const minus = document.querySelector('button[data-action="decrement"]');
+const plus = value.nextElementSibling;
+const minus = value.previousElementSibling;
 let counterValue = 0;
 
 plus.addEventListener('click', () => {

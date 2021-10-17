@@ -15,5 +15,13 @@ const images = [
 
 const list = document.querySelector('.gallery');
 
-const markup = images.map(image => `<li><img src="${image.url}" alt="image.alt"></li>`);
+const markup = images.map(image => `<li><img src="${image.url}" alt="image.alt"></li>`).join('');
 list.insertAdjacentHTML('afterbegin', markup);
+
+const els = document.querySelectorAll('li');
+list.style.display = "flex";
+els.forEach(el => {
+  el.style.display = "flex";
+  el.style.width = "calc(100% / 3)";
+  el.firstElementChild.style.width = "100%";
+})
