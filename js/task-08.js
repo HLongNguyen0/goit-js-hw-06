@@ -15,4 +15,5 @@ form.addEventListener('submit', (event) => {
     } else {
         alert('wtf man ?')
     }
+    event.currentTarget.reset();
 })
